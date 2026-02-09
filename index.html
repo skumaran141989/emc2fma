@@ -159,6 +159,11 @@
             font-weight: 400;
             color: var(--text-light);
         }
+        
+        .experiment {
+            padding-left: 20px;
+            list-style: none;
+        }
 
         .submenu a:hover,
         .submenu a.active {
@@ -594,31 +599,39 @@
     <aside class="sidebar">
         <ul class="sidebar-nav">
             <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#experience" class="nav-link">Professional Experience</a></li>
             <li><a href="#academic-research" class="nav-link">Academic Research</a></li>
-            <li><a href="#experience" class="nav-link">Experience</a></li>
+<li>
+    <a href="#current-research" class="nav-link">Current Research</a>
+    <ul class="experiment">
             <li class="has-submenu">
                 <a href="#products" class="nav-link">Products</a>
                 <ul class="submenu">
-                    <li><a href="#products-pocs" class="nav-link">POCs</a></li>
                     <li><a href="#products-dat-trans" class="nav-link">DaT-Trans</a></li>
                     <li><a href="#products-d-e-eng" class="nav-link">D-E-ENG</a></li>
                     <li><a href="#products-json-e-e-i" class="nav-link">JSON-E-E-I</a></li>
                     <li><a href="#products-api-gw" class="nav-link">API-GW</a></li>
                 </ul>
             </li>
+          <li>
+    <a href="#experiment" class="nav-link">Experiments</a>
+    <ul class="experiment">
             <li class="has-submenu">
-                <a href="#languages-tech" class="nav-link">Experiement : Languages</a>
+                <a href="#languages-tech" class="nav-link">Languages and Frameworks</a>
                 <ul class="submenu">
                     <li><a href="#tech-spring-boot" class="nav-link">Spring Boot</a></li>
-                    <li><a href="#tech-react" class="nav-link">React</a></li>
-                    <li><a href="#tech-system-design" class="nav-link">System Design</a></li>
-                    <li><a href="#tech-java" class="nav-link">Java</a></li>
-                    <li><a href="#tech-nodejs" class="nav-link">NodeJS</a></li>
+                     <li><a href="#tech-nodejs" class="nav-link">NodeJS</a></li>
                     <li><a href="#tech-webflux" class="nav-link">Java Webflux</a></li>
+                    <li><a href="#tech-react" class="nav-link">React</a></li>
+                    <li><a href="#tech-nextjs" class="nav-link">NetxJS</a></li>
+                    <li><a href="#tech-java" class="nav-link">Java</a></li>
                 </ul>
             </li>
-            <li><a href="#system-design-architecture" class="nav-link">Experiement : System Design and Architecture</a></li>
-          <li><a href="#dsa" class="nav-link">Experiement : DSA and Match</a></li>
+            <li><a href="#system-design-architecture" class="nav-link">System Design and Architecture</a></li>
+          <li><a href="#dsa" class="nav-link">DSA and Mathematics</a></li>
+        </ul>
+        </ul>
+        
         </ul>
     </aside>
 
@@ -704,7 +717,7 @@
                         <p>My academic research was focused on practical applications of computer science principles, with emphasis on cloud computing, Machine Learning. </p>
                         <p>I was part of LEARN and MAST lab in UT Arlington.</p>
                         
-                        <p style="margin-top: 2rem;"><h4>Research Works:</h4></p>
+                        <p style="margin-top: 2rem;"><h4>Research Works:</h4>
                         <ul>
                             <li></li>
                             <li>Overall Storm Identification</li>
@@ -735,7 +748,7 @@
                             <li><strong>Languages: </strong><span>MERN (ts, js), JAVA (Sprin-Boot/Webflux-Reactive), .Net, Golang, Python</span></li>
                             <li><strong>Cloud services: </strong> AWS and Azure</li>
                             <li><strong>Hosting</Strong>: Docker, Kubernetes and Serverless, Nginix, IIS, web-sphere</li>
-                            <li><strong>Analytics and Distributed computing: </stoing>Pyspark, NumPy, Pandas, AWS glue, Athena</li>
+                            <li><strong>Analytics and Distributed computing: </strong>Pyspark, NumPy, Pandas, AWS glue, Athena</li>
                             <li>SQL PL/SQL, NOSQL </li>
                         </ul>
                         <p style="margin-top: 2rem;"><strong>Projects</strong>
@@ -756,6 +769,31 @@
                             <li>Data engineering pipelines</li>
                         </ul>
                     </div>
+                </section>
+            </div>
+            
+                             <!-- PRODUCTS PAGES -->
+            <div id="current-research" class="page-content">
+                <section class="section">
+                    <div class="section-header">
+                        <h2 class="section-title"><span>Current</span> Research</h2>
+                    </div>
+                    
+                    <p class="section-subtitle">My current research targets providing software solutions and focused on building generic platforms and analysing tech-depths.</p>
+                     <div class="about-card">
+                      <p style="margin-top: 2rem;"><strong>Research Areas:</strong>
+                        <ul style="margin-top: 1.5rem;">
+                            <li>Enterrise data</li>
+                            <li>No-code/low-code platforms</li>
+                            <li>Languages tech-depth and rationality</li>
+                            <li>Compilers</li>
+                            <li>Re-usable, generic microservices</li>
+                            <li>Sytem Architecture</li>
+                            <li>Datastructures - beyond programming</li>
+                            <li>Distrubuted computation</li>
+                            <li>Data ETL</li>
+                        </ul>
+                        </div>
                 </section>
             </div>
 
@@ -788,18 +826,6 @@
             </div>
 
             <!-- Individual Product Pages -->
-            <div id="products-pocs" class="page-content">
-                <section class="section">
-                    <div class="section-header">
-                        <h2 class="section-title"><span>POCs</span></h2>
-                        <p class="section-subtitle">Proof of Concepts and Technical Feasibility Studies</p>
-                    </div>
-                    <div class="about-card">
-                        <h3>Overview</h3>
-                        <p>This section showcases various proof-of-concept projects demonstrating innovative solutions and validating technical approaches before full implementation.</p>
-                    </div>
-                </section>
-            </div>
 
             <div id="products-dat-trans" class="page-content">
                 <section class="section">
@@ -888,7 +914,7 @@
                     </div>
                 </section>
             </div>
-            <div id="tech-react" class="page-content">
+            <div id="tech-nextjs" class="page-content">
                 <section class="section">
                     <div class="section-header">
                         <h2 class="section-title"><span>NextJS</span></h2>
