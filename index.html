@@ -170,6 +170,10 @@
             color: var(--primary);
             background: var(--bg-light);
         }
+        .download a{
+            color: var(--primary);
+            background: var(--bg-light);
+        }
 
         /* Main Layout with Sidebar */
         .main-wrapper {
@@ -607,10 +611,13 @@
             <li class="has-submenu">
                 <a href="#products" class="nav-link">Products</a>
                 <ul class="submenu">
-                    <li><a href="#products-dat-trans" class="nav-link">DaT-Trans</a></li>
+                    <li><a href="#api-gw" class="nav-link">API Gateway</a></li>
+                </ul>
+                <ul class="submenu">
+                    <!-- <li><a href="#products-dat-trans" class="nav-link">DaT-Trans</a></li>
                     <li><a href="#products-d-e-eng" class="nav-link">D-E-ENG</a></li>
                     <li><a href="#products-json-e-e-i" class="nav-link">JSON-E-E-I</a></li>
-                    <li><a href="#products-api-gw" class="nav-link">API-GW</a></li>
+                    <li><a href="#products-api-gw" class="nav-link">API-GW</a></li> -->
                 </ul>
             </li>
           <li>
@@ -807,39 +814,54 @@
                     <div class="section-header">
                         <h2 class="section-title"><span>Products</span> & Projects</h2>
                     </div>
-                    
-                    <div class="products-grid">
-                        <div class="product-card">
-                            <h4>DaT-Trans</h4>
-                            <p></p>
-                        </div>
-                        <div class="product-card">
-                            <h4>D-E-ENG</h4>
-                            <p></p>
-                        </div>
-                        <div class="product-card">
-                            <h4>JSON-E-E-I</h4>
-                            <p></p>
-                        </div>
-                        <div class="product-card">
-                            <h4>API-GW</h4>
-                            <p></p>
-                        </div>
-                    </div>
+                    <div class="about-card">
+                    <h3><I><p style="text-align:center;">"Service components as product"</p></I></h3>
+                     <p style="margin-top: 2rem;">
+                        A software product can be built by predefined API services and configuring their communication flow. 
+                        From my past software industry experience, 
+                        building various products and features across domains using technologies and conducting case-studies as part of research in EMC2FMA, 
+                        I have developed a service components suite.</p>
+                        <p style="margin-top: 2rem;">This suite can be used across various domains and very easy to configure and deploy with few hours</p>
+                        <strong>Service Componets focuses on:</strong>
+                       <ul style="margin-top: 1.5rem;">
+                           <li>Security</li>
+                           <li>Third party API/Web communications</li>
+                           <li>Languages tech-depth and rationality</li>
+                           <li>Notifications enablements</li>
+                           <li>Scheduling</li>
+                           <li>Data/Distributed processing</li>
+                           <li>Datastructures - beyond programming</li>
+                           <li>Cloud Storage</li>
+                       </ul>
+                       </div>
                 </section>
             </div>
 
             <!-- Individual Product Pages -->
-
-            <div id="products-dat-trans" class="page-content">
+            <!-- <div class="products-grid">
+                <div class="product-card">
+                    <a href="https://drive.google.com/file/d/1OiHYII87QP7KGTIUMoAdoaCp7uprasQw/view?usp=drive_link" download target="_blank"><h4>API Gateway</h4></a>
+                </div>
+            </div>  -->
+            <div id="api-gw" class="page-content">
                 <section class="section">
                     <div class="section-header">
-                        <h2 class="section-title"><span>DaT-Trans</span></h2>
-                        <p class="section-subtitle">Data Transfomation accross systems</p>
+                        <h2 class="section-title"><span>API Gateway</span></h2>
+                        <p class="section-subtitle"><i>Authenticate, Redirect, Secure, Protect</i></p>
                     </div>
                     <div class="about-card">
-                        <h3>About DaT-Trans</h3>
-                        <p>.</p>
+                        <p style="margin-top: 2rem;">A Java based service that can Authenticate and protect your product.</p>
+
+                        <ul style="margin-top: 1.5rem;">
+                            <li > <span class="download">
+                                <a class="download" href="https://drive.google.com/file/d/1OiHYII87QP7KGTIUMoAdoaCp7uprasQw/view?usp=drive_link" download target="_blank">
+                                Download
+                                </a> 
+                            </span>
+                                the archieve and the fill the properties.
+                            </li>
+                            <li> Execuete the service using below command:
+                             <p style="margin-top: 2rem;"><i>java -jar java -jar api-gateway-0.0.1-spring-boot.jar</i></p> </li></ul></ul>
                     </div>
                 </section>
             </div>
