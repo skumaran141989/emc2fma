@@ -222,6 +222,15 @@
             text-align: center;
         }
 
+         .snippet {
+            z-index: 2;
+            padding:10px;
+            color: var(--text);
+            background: grey;
+            border-radius: 5px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        }
+
         .hero h1 {
             font-family: 'Poppins', sans-serif;
             font-size: clamp(3rem, 7vw, 5.5rem);
@@ -275,7 +284,7 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 80px 50px;
+            padding: 30px 50px;
         }
 
         .page-content {
@@ -287,7 +296,7 @@
         }
 
         .section {
-            margin-bottom: 100px;
+            margin-bottom: 60px;
         }
 
         .section-header {
@@ -297,7 +306,7 @@
 
         .section-title {
             font-family: 'Poppins', sans-serif;
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            
             font-weight: 800;
             color: var(--dark);
             margin-bottom: 1rem;
@@ -611,13 +620,7 @@
             <li class="has-submenu">
                 <a href="#products" class="nav-link">Products</a>
                 <ul class="submenu">
-                    <li><a href="#api-gw" class="nav-link">API Gateway</a></li>
-                </ul>
-                <ul class="submenu">
-                    <!-- <li><a href="#products-dat-trans" class="nav-link">DaT-Trans</a></li>
-                    <li><a href="#products-d-e-eng" class="nav-link">D-E-ENG</a></li>
-                    <li><a href="#products-json-e-e-i" class="nav-link">JSON-E-E-I</a></li>
-                    <li><a href="#products-api-gw" class="nav-link">API-GW</a></li> -->
+                    <li><a href="#api-gw" class="sub-nav-link">API Gateway</a></li>
                 </ul>
             </li>
           <li>
@@ -626,15 +629,19 @@
             <li class="has-submenu">
                 <a href="#languages-tech" class="nav-link">Languages and Frameworks</a>
                 <ul class="submenu">
-                    <li><a href="#tech-spring-boot" class="nav-link">Spring Boot</a></li>
-                     <li><a href="#tech-nodejs" class="nav-link">NodeJS</a></li>
-                    <li><a href="#tech-webflux" class="nav-link">Java Webflux</a></li>
-                    <li><a href="#tech-react" class="nav-link">React</a></li>
-                    <li><a href="#tech-nextjs" class="nav-link">NetxJS</a></li>
-                    <li><a href="#tech-java" class="nav-link">Java</a></li>
+                    <li><a href="#tech-spring-boot" class="sub-nav-link">Spring Boot</a></li>
+                     <li><a href="#tech-nodejs" class="sub-nav-link">NodeJS</a></li>
+                    <li><a href="#tech-webflux" class="sub-nav-link">Java Webflux</a></li>
+                    <li><a href="#tech-react" class="sub-nav-link">React</a></li>
+                    <li><a href="#tech-nextjs" class="sub-nav-link">NetxJS</a></li>
+                    <li><a href="#tech-java" class="sub-nav-link">Java</a></li>
                 </ul>
             </li>
-            <li><a href="#system-design-architecture" class="nav-link">System Design and Architecture</a></li>
+            <li class="has-submenu"><a href="#system-design-architecture" class="nav-link">System Design and Architecture</a>
+                        <ul class="submenu">
+                    <li><a href="#async-data-process" class="sub-nav-link">Async : Reactive vs Message Broker</a></li>
+                </ul>
+            </li>
           <li><a href="#dsa" class="nav-link">DSA and Mathematics</a></li>
         </ul>
         </ul>
@@ -654,403 +661,8 @@
         </section>
 
         <!-- Main Content Container -->
-        <main class="container">
-            <!-- HOME PAGE -->
-            <div id="home" class="page-content active">
-                <section class="section">
-                    <div class="section-header">
-                        <h2 class="section-title"><span>About</span> Me</h2>
-                        <p class="section-subtitle">Software Engineer. Independent Researcher. Passionate Educator.</p>
-                    </div>
-                    
-                    <div class="about-grid">
-                        <div class="about-card reveal">
-                            <h3>Who am I?</h3>
-                            <p>I am <strong>Sakthi Kumaran Shanmuganathan</strong>, a Software Engineer by profession with about 10 years of experience and a researcher by passion.</p>
-                            
-                            <div class="credentials">
-                                <div class="credential-item">
-                                    Bachelor of Engineering in Computer Science from Anna University
-                                </div>
-                                <div class="credential-item">
-                                    Master of Science in Computer Science from UT Arlington, Texas
-                                </div>
-                            </div>
+        <main class="container" id="main">
 
-                            <p style="margin-top: 2rem;">During my days at UT Arlington, I had the opportunity to work with great professors like <strong>Dr. Ramez Elmasri</strong> and <strong>Dr. Manfred Huber</strong>.</p>
-                            
-                            <div class="status-box">
-                                <strong>Current Status</strong>
-                                <p>I am currently not associated with any organisation and work as an Independent researcher.</p>
-                            </div>
-                        </div>
-
-                        <div class="about-card reveal">
-                            <h3>What I do here?</h3>
-                            
-                            <p><strong>Intent of this space:</strong></p>
-                            <p>Given the phase of software engineering towards AI-reliance that led to new field of prompt engineering, there is misunderstanding of usage of AI - technology should augement humans rather suppress thinking and learning.</p>
-                            
-                            <p style="margin-top: 2rem;"><strong>Core Philosophy:</strong></p>
-                            <p>Languages are communication tools and DSA defines the efficiency for using the tool. The core of software evolution was hands-on research.</p>
-                            
-                            <p style="margin-top: 1.5rem;">We were able to build Chat-GPT, Claude or an AI via manual coding, thinking with human emotions, solving on-line real-time issues with temperament.</p>
-
-                            <p style="margin-top: 2rem;"><strong>In this website, I will:</strong></p>
-                            <ul>
-                                <li>Showcase <strong>products</strong> built following software engineering skills and good research</li>
-                                <li>Share knowledge based on research via experiments covering <strong>DSA</strong>, <strong>Languages</strong>, and <strong>System Architecture/Design</strong> at an in-depth level</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-                <div class="note-box reveal">
-                    <strong>Important Note</strong>
-                    <p>Any content I post here is based on personal learnings and knowledge and does not associate with any of the organisations I worked or would work for.</p>
-                </div>
-            </div>
-
-            <!-- ACADEMIC RESEARCH PAGE -->
-            <div id="academic-research" class="page-content">
-                <section class="section">
-                    <div class="section-header">
-                        <h2 class="section-title">Academic <span>Research</span></h2>
-                        <p class="section-subtitle">Contributing to the advancement of computer science</p>
-                    </div>
-                    
-                    <div class="about-card">
-                        <h3>Research Overview</h3>
-                        <p>My academic research was focused on practical applications of computer science principles, with emphasis on cloud computing, Machine Learning. </p>
-                        <p>I was part of LEARN and MAST lab in UT Arlington.</p>
-                        
-                        <p style="margin-top: 2rem;"><h4>Research Works:</h4>
-                        <ul>
-                            <li></li>
-                            <li>Overall Storm Identification</li>
-                            <p>I implemnetd a Map-Reduce based alogorithm on Hadoop that can create storm tragectory from hourly storms that were created from raw rainfall measurement data over years</p>
-                            
-                            <li>Master Thesis - A Storm Targectory Prediction Model using HMM</li>
-                                
-                             <p>This project focused on building a model for predicting the directional and spatial movement of overall storm trajectories using Markov property. We develop a Markov Model from the given set of overall storm trajectories and extend it to the Hidden Markov Model, which is then improvised using a learning algorithm called Baum-welch.</p>
-                        </ul>
-                    </div>
-                </section>
-            </div>
-
-            <!-- EXPERIENCE PAGE -->
-            <div id="experience" class="page-content">
-                <section class="section">
-                    <div class="section-header">
-                        <h2 class="section-title">Professional <span>Experience</span></h2>
-                        <p class="section-subtitle">10+ years in software engineering and architecture</p>
-                    </div>
-                    
-                    <div class="about-card">
-                        <h3>Industry Highlights</h3>
-                        <p>With over a decade of experience in software engineering, I have worked across various business domains and Techstacks
-                        </p>
-                         <p style="margin-top: 1rem;">I have learnt, contributed and lead tech devlopments in <strong>Xome, ADP, Siemens PLM, SquareShift, Infosys</strong> and <strong> Wipro</strong>
-                          </p>
-                          <p style="margin-top: 1rem;">I have lead and contributed end to end product building in startups, <strong>Wiz-Freight </strong> and <strong> Business Core Solutions</strong></p>
-                        <p style="margin-top: 2rem;"><strong></strong>
-                        <ul style="margin-top: 1.5rem;">
-                            <li><strong>Domains: </strong><span>Mortgage, HR, Telecom, Data-quality, Retail</span></li>
-                            <li><strong>Languages: </strong><span>MERN (ts, js), JAVA (Sprin-Boot/Webflux-Reactive), .Net, Golang, Python</span></li>
-                            <li><strong>Cloud services: </strong> AWS and Azure</li>
-                            <li><strong>Hosting</Strong>: Docker, Kubernetes and Serverless, Nginix, IIS, web-sphere</li>
-                            <li><strong>Analytics and Distributed computing: </strong>Pyspark, NumPy, Pandas, AWS glue, Athena</li>
-                            <li>SQL PL/SQL, NOSQL </li>
-                        </ul>
-                        <p style="margin-top: 2rem;"><strong>Projects</strong>
-                        <ul style="margin-top: 1.5rem;">
-                            <li><strong>DQView</strong> - A node-code/low-code platform to configure business rules to generate scrambled data and Data Quality reports accross resources.</li>
-                            <li><strong>Quick Acceptance</strong> - A Shortened URL SMS notification system for mortgage REO appraiser assessment.</li>
-                            <li>Document Process automation Orchestartor</li>
-                            <li>Various API Integrations and web appplications.</li>
-                            <li><strong>Encomapss Plugin</strong> - A desktop app plugin for loan lender management system.</li>
-                        </ul>
-                        <p style="margin-top: 2rem;"><strong>Key Areas:</strong>
-                        <ul style="margin-top: 1.5rem;">
-                            <li>Enterprise application development</li>
-                            <li>Microservices architecture design</li>
-                            <li>Cloud-native solutions</li>
-                            <li>API gateway or Securit implementations</li>
-                            <li>Scalable solutions</li>
-                            <li>Data engineering pipelines</li>
-                        </ul>
-                    </div>
-                </section>
-            </div>
-            
-                             <!-- RESEARCH -->
-            <div id="current-research" class="page-content">
-                <section class="section">
-                    <div class="section-header">
-                        <h2 class="section-title"><span>Current</span> Research</h2>
-                    </div>
-                    
-                    <p class="section-subtitle">My current research targets providing software solutions and focused on building generic platforms and analysing tech-depths.</p>
-                     <div class="about-card">
-                      <p style="margin-top: 2rem;"><strong>Research Areas:</strong>
-                        <ul style="margin-top: 1.5rem;">
-                            <li>Enterrise data</li>
-                            <li>No-code/low-code platforms</li>
-                            <li>Languages tech-depth and rationality</li>
-                            <li>Compilers</li>
-                            <li>Re-usable, generic microservices</li>
-                            <li>Sytem Architecture</li>
-                            <li>Datastructures - beyond programming</li>
-                            <li>Distrubuted computation</li>
-                            <li>Data ETL</li>
-                        </ul>
-                        </div>
-                </section>
-            </div>
-
-            <!-- PRODUCTS PAGES -->
-            <div id="products" class="page-content">
-                <section class="section">
-                    <div class="section-header">
-                        <h2 class="section-title"><span>Products</span> & Projects</h2>
-                    </div>
-                    <div class="about-card">
-                    <h3><I><p style="text-align:center;">"Service components as product"</p></I></h3>
-                     <p style="margin-top: 2rem;">
-                        A software product can be built by predefined API services and configuring their communication flow. 
-                        From my past software industry experience, 
-                        building various products and features across domains using technologies and conducting case-studies as part of research in EMC2FMA, 
-                        I have developed a service components suite.</p>
-                        <p style="margin-top: 2rem;">This suite can be used across various domains and very easy to configure and deploy with few hours</p>
-                        <strong>Service Componets focuses on:</strong>
-                       <ul style="margin-top: 1.5rem;">
-                           <li>Security</li>
-                           <li>Third party API/Web communications</li>
-                           <li>Languages tech-depth and rationality</li>
-                           <li>Notifications enablements</li>
-                           <li>Scheduling</li>
-                           <li>Data/Distributed processing</li>
-                           <li>Datastructures - beyond programming</li>
-                           <li>Cloud Storage</li>
-                       </ul>
-                       </div>
-                </section>
-            </div>
-
-            <!-- Individual Product Pages -->
-            <!-- <div class="products-grid">
-                <div class="product-card">
-                    <a href="https://drive.google.com/file/d/1OiHYII87QP7KGTIUMoAdoaCp7uprasQw/view?usp=drive_link" download target="_blank"><h4>API Gateway</h4></a>
-                </div>
-            </div>  -->
-            <div id="api-gw" class="page-content">
-                <section class="section">
-                    <div class="section-header">
-                        <h2 class="section-title"><span>API Gateway</span></h2>
-                        <p class="section-subtitle"><i>Authenticate, Redirect, Secure, Protect</i></p>
-                    </div>
-                    <div class="about-card">
-                        <p style="margin-top: 2rem;">A Java based service that can Authenticate and protect your product.</p>
-
-                        <ul style="margin-top: 1.5rem;">
-                            <li > <span class="download">
-                                <a class="download" href="https://drive.google.com/file/d/1OiHYII87QP7KGTIUMoAdoaCp7uprasQw/view?usp=drive_link" download target="_blank">
-                                Download
-                                </a> 
-                            </span>
-                                the archieve and the fill the properties.
-                            </li>
-                            <li> Execuete the service using below command:
-                             <p style="margin-top: 2rem;"><i>java -jar java -jar api-gateway-0.0.1-spring-boot.jar</i></p> </li></ul></ul>
-                    </div>
-                </section>
-            </div>
-
-            <div id="products-d-e-eng" class="page-content">
-                <section class="section">
-                    <div class="section-header">
-                        <h2 class="section-title"><span>D-E-ENG</span></h2>
-                        <p class="section-subtitle">Data Extraction Engineering</p>
-                    </div>
-                    <div class="about-card">
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </section>
-            </div>
-
-            <div id="products-json-e-e-i" class="page-content">
-                <section class="section">
-                    <div class="section-header">
-                        <h2 class="section-title"><span>JSON-E-E-I</span></h2>
-                        <p class="section-subtitle">JSON Processing Tools</p>
-                    </div>
-                    <div class="about-card">
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </section>
-            </div>
-
-            <div id="products-api-gw" class="page-content">
-                <section class="section">
-                    <div class="section-header">
-                        <h2 class="section-title"><span>API-GW</span></h2>
-                        <p class="section-subtitle">API Gateway Implementation</p>
-                    </div>
-                    <div class="about-card">
-                        <h3>API Gateway</h3>
-                        <p>Robust API Gateway implementations for microservices architecture, providing routing, security, and scalability.</p>
-                    </div>
-                </section>
-            </div>
-
-            <!-- LANGUAGES & TECH PAGES -->
-            <div id="languages-tech" class="page-content">
-                <section class="section">
-                    <div class="section-header">
-                        <h2 class="section-title"><span>Experiment - Languages and Frameworks</span></h2>
-                        <p class="section-subtitle">Indepth-across the modern technology stack</p>
-                    </div>
- 
-                </section>
-            </div>
-
-            <!-- Individual Tech Pages -->
-            <div id="tech-spring-boot" class="page-content">
-                <section class="section">
-                    <div class="section-header">
-                        <h2 class="section-title"><span>Spring Boot</span></h2>
-                    </div>
-                    <div class="about-card">
-                        <h3></h3>
-
-                    </div>
-                </section>
-            </div>
-
-            <div id="tech-react" class="page-content">
-                <section class="section">
-                    <div class="section-header">
-                        <h2 class="section-title"><span>React</span></h2>
-                    </div>
-                    <div class="about-card">
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </section>
-            </div>
-            <div id="tech-nextjs" class="page-content">
-                <section class="section">
-                    <div class="section-header">
-                        <h2 class="section-title"><span>NextJS</span></h2>
-                    </div>
-                    <div class="about-card">
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </section>
-            </div>
-            <div id="tech-react" class="page-content">
-                <section class="section">
-                    <div class="section-header">
-                        <h2 class="section-title"><span>SQL/NOSQL</span></h2>
-                    </div>
-                    <div class="about-card">
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </section>
-            </div>
-
-            <div id="tech-system-design" class="page-content">
-                <section class="section">
-                    <div class="section-header">
-                        <h2 class="section-title"><span>System Design</span></h2>
-                    </div>
-                    <div class="about-card">
-                        <h3>System Design Principles</h3>
-                        <p>Comprehensive understanding of system design patterns, scalability, and architectural best practices.</p>
-                    </div>
-                </section>
-            </div>
-
-
-            <div id="tech-java" class="page-content">
-                <section class="section">
-                    <div class="section-header">
-                        <h2 class="section-title"><span>Java</span></h2>
-                    </div>
-                    <div class="about-card">
-                        <h3>Java</h3>
-                        <p></p>
-                    </div>
-                </section>
-            </div>
-
-
-            <div id="tech-nodejs" class="page-content">
-                <section class="section">
-                    <div class="section-header">
-                        <h2 class="section-title"><span>Node.js</span></h2>
-                    </div>
-                    <div class="about-card">
-                        <h3>Node.js </h3>
-                        <p></p>
-                    </div>
-                </section>
-            </div>
-
-            <div id="tech-webflux" class="page-content">
-                <section class="section">
-                    <div class="section-header">
-                        <h2 class="section-title"><span>Java WebFlux</span></h2>
-                    </div>
-                    <div class="about-card">
-                        <h3>Reactive Programming</h3>
-                        <p></p>
-                    </div>
-                </section>
-            </div>
-
-
-            <!-- SYSTEM DESIGN & ARCHITECTURE PAGE -->
-            <div id="system-design-architecture" class="page-content">
-                <section class="section">
-                    <div class="section-header">
-                        <h2 class="section-title">System Design & <span>Architecture</span></h2>
-                        <p class="section-subtitle">Scalable and robust architectural patterns</p>
-                    </div>
-                    
-                    <div class="about-card">
-                        <h3>Experiment and Experience System Architectures and Design </h3>
-                        <p>Designing systems that are scalable, maintainable, and resilient. Focus on microservices, distributed systems, and cloud-native architectures.</p>
-                        
-                        <p style="margin-top: 2rem;"><strong>Key Areas:</strong></p>
-                        <ul>
-                            <li></li>
-                        </ul>
-                    </div>
-                </section>
-            </div>
-             <div id="dsa" class="page-content">
-                <section class="section">
-                    <div class="section-header">
-                        <h2 class="section-title">Experiment DS & Algos - Think with<span>Math</span></h2>
-                        <p class="section-subtitle"></p>
-                    </div>
-                    
-                    <div class="about-card">
-                        <h3> </h3>
-                        <p>.</p>
-                        
-                        <p style="margin-top: 2rem;"><strong>Key Areas:</strong></p>
-                        <ul>
-                            <li></li>
-                        </ul>
-                    </div>
-                </section>
-            </div>
         </main>
 
         <!-- Footer -->
@@ -1065,11 +677,33 @@
         const navLinks = document.querySelectorAll('.nav-link');
         const pages = document.querySelectorAll('.page-content');
         const submenuItems = document.querySelectorAll('.has-submenu');
+        const main = document.getElementById("main");
+        const allsublinks = document.querySelectorAll('.sub-nav-link');
+
+        window.addEventListener('load', async function(e) {
+            e.preventDefault();
+            const content = await fetch(`./home.html`);
+            main.innerHTML=await content.text();
+            
+            // Hide all pages
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Show target page
+            const targetPage = document.getElementById('home');
+            if (targetPage) {
+                targetPage.classList.add('active');
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
 
         navLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
+            link.addEventListener('click', async function(e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href').substring(1);
+                 //const targetId = link.getAttribute('href').substring(1);
+                const content = await fetch(`./${targetId}.html`);
+                main.innerHTML=await content.text();
                 
                 // Hide all pages
                 pages.forEach(page => page.classList.remove('active'));
@@ -1085,6 +719,9 @@
                 
                 // Update active state
                 navLinks.forEach(l => l.classList.remove('active'));
+                 submenuItems.forEach(l => l.classList.remove('active'));
+                 allsublinks.forEach(l => l.classList.remove('active'));
+                 //sublinks.forEach(l => l.classList.remove('active'));
                 this.classList.add('active');
 
                 // Close mobile menu if open
@@ -1094,23 +731,30 @@
             });
         });
 
+        
         // Submenu toggle
         submenuItems.forEach(item => {
             const link = item.querySelector('a');
             const submenu = item.querySelector('.submenu');
-            
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                
-                // Toggle submenu
-                item.classList.toggle('open');
-                submenu.classList.toggle('open');
-                
-                // Navigate to parent page
-                const targetId = this.getAttribute('href').substring(1);
-                pages.forEach(page => page.classList.remove('active'));
-                const targetPage = document.getElementById(targetId);
+            const sublinks = item.querySelectorAll('.sub-nav-link');
+            sublinks.forEach(item2 =>{
+                item2.addEventListener('click', async function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Toggle submenu
+                    //item2.classList.toggle('open');
+                    //submenu.classList.toggle('open');
+
+                    pages.forEach(page => page.classList.remove('active'));
+                    
+                    // Navigate to parent page
+                    const ptargetId = link.getAttribute('href').substring(1);
+                    const targetId = item2.getAttribute('href').substring(1);
+                    const content = await fetch(`./${ptargetId}/${targetId}.html`);
+                    main.innerHTML=await content.text();
+                    
+                 const targetPage = document.getElementById(targetId);
                 if (targetPage) {
                     targetPage.classList.add('active');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1118,6 +762,34 @@
                 
                 // Update active state
                 navLinks.forEach(l => l.classList.remove('active'));
+                 submenuItems.forEach(l => l.classList.remove('active'));
+                 allsublinks.forEach(l => l.classList.remove('active'));
+                 this.classList.add('active');
+                });
+            });
+            
+            link.addEventListener('click', async function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                // Toggle submenu
+                item.classList.toggle('open');
+                submenu.classList.toggle('open');
+
+                pages.forEach(page => page.classList.remove('active'));
+                   
+                // const ptargetId = this.getAttribute('href').substring(1);
+
+                // const targetPage = document.getElementById(ptargetId);
+                // if (targetPage) {
+                //     targetPage.classList.add('active');
+                //     window.scrollTo({ top: 0, behavior: 'smooth' });
+                // }
+                
+                // Update active state
+                 navLinks.forEach(l => l.classList.remove('active'));
+                 submenuItems.forEach(l => l.classList.remove('active'));
+                 allsublinks.forEach(l => l.classList.remove('active'));
                 this.classList.add('active');
             });
         });
@@ -1143,6 +815,7 @@
 
         window.addEventListener('scroll', revealOnScroll);
         window.addEventListener('load', revealOnScroll);
+
     </script>
 </body>
 </html>
