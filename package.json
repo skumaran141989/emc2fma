@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "node-html-parser": "^7.0.2",
+    "serve": "^13.0.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "type": "module"
+}

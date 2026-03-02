@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMC2FMA - Innovate with Education</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">/
+    <link rel="stylesheet" href="css/app.css" type="text/css">
+ </head>
+<body>
+    
+    <header>
+        <nav>
+            <a href="./index" class="logo">EMC2FMA</a>
+            <button class="mobile-menu-btn">☰ Menu</button>
+        </nav>
+    </header>
+
+    
+    <aside class="sidebar">
+        <ul class="sidebar-nav">
+            <li><a href="./index" class="nav-link">Home</a></li>
+            <li><a href="./experience" class="nav-link">Professional Experience</a></li>
+            <li><a href="./academic-research" class="nav-link">Academic Research</a></li>
+            <li>
+                <a href="./current-research" class="nav-link">Current Research</a>
+                <ul class="research">
+                    <li class="has-submenu">
+                        <a href="./products" class="nav-link">Products</a>
+                        <ul class="submenu">
+                            <li><a href="./api-gw" class="nav-link">API Gateway</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="./experiment" class="nav-link">Experiments</a>
+                        <ul class="languages-frameworks">
+                            <li class="has-submenu">
+
+                                <a href="./languages-tech" class="nav-link">Languages and Frameworks</a>
+                                <ul class="submenu open">
+                                    <li><a href="./tech-spring-boot" class="nav-link">Spring Boot</a></li>
+                                    <li><a href="./tech-nodejs" class="nav-link active">NodeJS</a></li>
+                                    <li><a href="./tech-webflux" class="nav-link">Java Webflux</a></li>
+                                    <li><a href="./tech-react" class="nav-link">React</a></li>
+                                    <li><a href="./tech-nextjs" class="nav-link">NextJS</a></li>
+                                    <li><a href="./tech-java" class="nav-link">Java</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-submenu">
+                                <a href="./system-design-architecture" class="nav-link">System Design and Architecture</a>
+                                <ul class="submenu">
+                                    <li><a href="./async-data-process" class="nav-link">Async : Reactive vs Message Broker</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="./dsa" class="nav-link">DSA and Mathematics</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+
+    
+    <div class="main-wrapper">
+        
+        <section class="hero">
+            <div class="hero-content">
+                <h1><span>Innovate</span> with Education</h1>
+                <h2>(optionally Augment with AI)</h2>
+                <h3>Stay smart to evolve, not to suppress</h3>
+            </div>
+        </section>
+
+        
+        <main class="container" id="main">            <div id="tech-nodejs" class="page-content active">
+                <section class="section">
+                    <div class="section-header">
+                        <h2 class="section-title"><span>Node.js</span></h2>
+                    </div>
+                    <div class="about-card">
+                        <p></p>
+                    </div>
+                </section>
+            </div></main>
+
+        
+        <footer>
+            <p>&copy; 2026 EMC2FMA — Sakthi Kumaran Shanmuganathan</p>
+            <p>Built with passion for education and innovation</p>
+        </footer>
+    </div>
+
+    <script>
+        const navlinks=document.querySelectorAll('.has-submenu');
+        navlinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                //e.preventDefault();
+                this.classList.toggle('open');
+            });
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.toggle('mobile-open');
+        });
+
+        // Scroll reveal animation
+        const reveals = document.querySelectorAll('.reveal');
+        
+        const revealOnScroll = () => {
+            reveals.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+
+    </script>
+</body>
+</html>
