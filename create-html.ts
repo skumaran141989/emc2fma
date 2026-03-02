@@ -32,7 +32,7 @@ function createHTML(){
         
         if(container){
             container.innerHTML=htmlChildContent
-            fs.writeFileSync(`./build/${fileType.name}`, root.toString())
+            fs.writeFileSync(`./docs/${fileType.name}`, root.toString())
         }
          
       })
