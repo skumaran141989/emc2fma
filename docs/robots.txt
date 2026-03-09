@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /private/
 Allow: /
-Sitemap: https://emc2fma.com/sitemap.xml
+Sitemap: https://www.emc2fma.com/sitemap.xml
