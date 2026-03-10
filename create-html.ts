@@ -8,14 +8,24 @@ function createHTML(){
       const htmlContent =fs.readFileSync('./src/template.html', 'utf-8');
       let urls = ``
       allfiles.filter((file)=>file.isFile()).forEach((fileType) => {
-
+          //const phtml = htmlContent;
           const file = `${fileType.parentPath}/${fileType.name}`;
           urls=`${urls}${createSiteMapEntry(fileType.name.replace('.html',''))}`
 
           const htmlChildContent =fs.readFileSync(`${file}`, 'utf-8');
+          const chtml = parse(htmlChildContent)
+          const ctitle = chtml.querySelector('title')
+          const metas = chtml.querySelectorAll("meta")
           const root = parse(htmlContent);
           const link = root.querySelector(`[href="./${fileType.name.replace('.html','')}"]`);
-          
+          const head = root.querySelector("head")
+         
+
+          if(ctitle)
+            head?.appendChild(ctitle)
+        
+          metas.forEach((meta)=>{head?.append(meta)})
+
           link?.classList.add('active');
 
           let pnode=link?.parentNode
@@ -34,7 +44,7 @@ function createHTML(){
         const container = root.querySelector('#main');
         
         if(container){
-            container.innerHTML=htmlChildContent
+            container.innerHTML=`\n${htmlChildContent}\n`
             fs.writeFileSync(`./docs/${fileType.name}`, root.toString())
         }
          
